@@ -11,9 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-app.get("/",(req,res)=>{
-  res.send("App is running")
-})
+
 mongoose.connect("mongodb+srv://Theva:theva2002@cluster0.th7vxid.mongodb.net/todolistDB",{useNewUrlParser:true,useUnifiedTopology:true
 });
 const itemsSchema=new mongoose.Schema({
@@ -125,7 +123,7 @@ app.post("/delete",function(req,res){
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8000;
+  port = 3000;
 }
 
 app.listen(port, function() {
