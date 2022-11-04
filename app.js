@@ -12,8 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://Theva:theva2002@cluster0.th7vxid.mongodb.net/todolistDB",{useNewUrlParser:true,useUnifiedTopology:true
-});
+
 const itemsSchema=new mongoose.Schema({
   name:String
 });
